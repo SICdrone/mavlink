@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<mavlink>
+  <!-- SICDRONE                           -->
+  <!--                        -->
+  <!-- email contact: liam@sicdrone.com     -->
+  <!-- mavlink ID range: 10000 - 10099                            -->
+    <include>common.xml</include>
+
+    <dialect>8</dialect>
+    
+    <messages>
+     <message id="10088" name="FUEL_STATUS">
+      <description>Information pertaining to the status of the fuel tank and projected flight characteristics based on the status</description>
+      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint8_t" name="target_component">Component ID</field>
+      <field type="float" name="starting_fuel_level" units="L">float</field>
+      <field type="float" name="current_fuel_level" units="L">float</field>
+      <field type="float" name="max_flight_distance_remaining" units="km">float</field>
+      <field type="float" name="avg_burn_rate" units="mL/m">float</field>
+     </message>
+    </messages>
+
+</mavlink>
